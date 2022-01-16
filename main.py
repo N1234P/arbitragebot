@@ -9,9 +9,9 @@ web3 = Web3(Web3.HTTPProvider(bsc))
 
 trading_amount = 3000000000000  # 30K SFM v2
 
-
 time.sleep(10)
-PRIVATE_KEY = "DO NOT SHARE THIS WITH ANYONE"
+PRIVATE_KEY = "KEEP SECRET!!"
+
 
 def begin_arb():
     while True:
@@ -294,4 +294,5 @@ def buy_SFS(bnb_amount):
     time.sleep(300)  # temporary
 
 
-
+if __name__ == '__main__':
+    begin_arb()
