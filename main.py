@@ -7,10 +7,10 @@ bsc = "https://bsc-dataseed.binance.org/"
 
 web3 = Web3(Web3.HTTPProvider(bsc))
 
-trading_amount = 3000000000000  # 30K SFM v2
+trading_amount = 3000000000000  # 30K SFM v2 (CHANGE 30000 SFM V2 IF YOU DO NOT WANT TO TRADE THAT MUCH.)
 
 time.sleep(10)
-PRIVATE_KEY = "KEEP SECRET!!"
+PRIVATE_KEY = "KEEP SECRET!!" 
 
 
 def begin_arb():
@@ -30,8 +30,8 @@ def begin_arb():
         if sfs_price > pcs_price:
             print("SELL: " + str(sfs_price))
             print("BUY: " + str(pcs_price))
-            if sfs_price > (1.24 * pcs_price):
-                bnb_equivalent = ((30000 * sfs_price) * .88) / bnb_price
+            if sfs_price > (1.24 * pcs_price):   # set at 24%
+                bnb_equivalent = ((30000 * sfs_price) * .88) / bnb_price  # CHANGE 30000 SFM V2 IF YOU DO NOT WANT TO TRADE THAT MUCH.  (below as well)
                 sell_SFS()
                 buy_PCS(bnb_equivalent)
 
